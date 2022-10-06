@@ -29,13 +29,13 @@ fn main() {
 }
 
 fn cli() -> Command {
-    let cmd = Command::new("")
+    let cmd = Command::new("dispenser")
         .version(env!("CARGO_PKG_VERSION"))
         .subcommand(Command::new("create").about("create new Dispenser server"))
         .subcommand(Command::new("start").about("start Dispenser server"))
         .subcommand(Command::new("stop").about("stop Dispenser server"))
         .subcommand(Command::new("update").about("stop Dispenser server"))
-        .subcommand(Command::new("new").about("initalize new Dispenser with an existing server"));
+        .subcommand(Command::new("init").about("initalize new Dispenser with an existing server"));
 
     return cmd;
 }
